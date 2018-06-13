@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="226" pageHeight="792" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="1d3398af-9d8e-40e9-8387-e509d99e42e1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="158"/>
+	<parameter name="NumeroDeRecibo" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+Ncc_Pagos.Pagos_ID,
+Ncc_Pagos.Pagos_IDCompra,
+Ncc_Pagos.Pagos_Abono,
+Ncc_Pagos.Pagos_FechaAdicion,
+Ncc_Pagos.Pagos_Referencia,
+Ncc_Pagos.Pagos_Observacion,
+Ncc_Pagos.Pagos_NumCuenta,
+Ncc_Pagos.Pagos_IDMetodoPago,
+Ncc_MetodosPago.MPag_Descripcion,
+Ncc_Proveedores.Pro_Proveedor,
+Ncc_Proveedores.Pro_RFC
+FROM
+Ncc_Pagos
+INNER JOIN Ncc_MetodosPago ON Ncc_MetodosPago.MPag_Codigo = Ncc_Pagos.Pagos_IDMetodoPago
+INNER JOIN Ncc_Proveedores ON Ncc_Proveedores.Pro_ID = Ncc_Pagos.Pagos_IDProveedor
+ WHERE Ncc_Pagos.Pagos_ID= $P{NumeroDeRecibo}]]>
+	</queryString>
+	<field name="Pagos_ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pagos_IDCompra" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pagos_Abono" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pagos_FechaAdicion" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pagos_Referencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pagos_Observacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pagos_NumCuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pagos_IDMetodoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MPag_Descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pro_Proveedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Pro_RFC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="e555023e-54c8-4346-b1db-edb88d4c5c3b"/>
+				<textFieldExpression><![CDATA["Recibo: "+$P{NumeroDeRecibo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="15" width="100" height="20" uuid="ae5a460f-54ad-45dc-ba18-7892e34b6411"/>
+				<textFieldExpression><![CDATA["Compra: "+$F{Pagos_IDCompra}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="186" height="20" uuid="2e15741e-a607-418f-9531-89be27dd4264"/>
+				<textFieldExpression><![CDATA["Se Abonó la cantidad de: "+$F{Pagos_Abono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="186" height="41" uuid="ee40b5b8-9aba-4499-8ed9-0e0deae83e2e"/>
+				<textFieldExpression><![CDATA["Metodo de pago: "+$F{MPag_Descripcion}+" "+$F{Pagos_NumCuenta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="186" height="62" isRemoveLineWhenBlank="true" uuid="4be843b9-71d4-402b-8ab2-25dcfc6ffec7"/>
+				<textFieldExpression><![CDATA["Referencia: "+$F{Pagos_Referencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="63" width="186" height="62" uuid="ab07cd29-beba-493e-85c3-4054306b9cbd"/>
+				<textFieldExpression><![CDATA["Nota: "+$F{Pagos_Observacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="186" height="45" uuid="0fa5b961-9a5d-4c00-98bd-d470879329c0"/>
+				<textFieldExpression><![CDATA[$F{Pro_Proveedor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="4" width="186" height="50" uuid="2b9c965b-64d7-4cfd-a31c-6bd64d6c5e7c"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="2of7" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{Pagos_ID}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="89" y="22" width="97" height="20" uuid="8c54f7c7-3dcd-4311-a2c7-c78b799875ae"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="22" width="103" height="20" uuid="50711f7c-08fb-42e3-8e86-6d0c66e998f0"/>
+				<text><![CDATA[Hora de impresión:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="2" width="186" height="20" uuid="d0bcbcf8-9e22-4c2a-8204-2d0e8d79fd32"/>
+				<textFieldExpression><![CDATA[$F{Pro_RFC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

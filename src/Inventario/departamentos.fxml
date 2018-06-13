@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.DoubleValidator?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventario.DepartamentosController">
+   <children>
+      <DoubleValidator layoutX="85.0" layoutY="140.0" />
+      <TreeView fx:id="TreeviewDepartamentos" onMouseClicked="#AccionClicEnTreeView" prefHeight="500.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXTextField fx:id="txt_nombredepo" labelFloat="true" layoutX="245.0" layoutY="18.0" prefHeight="24.0" prefWidth="200.0" promptText="Nombre departamento" />
+      <Button fx:id="Btn_Acciones" layoutX="463.0" layoutY="17.0" mnemonicParsing="false" onAction="#AccionAgregaYcambia" text="Agregar" />
+      <TableView fx:id="TablaProductos" layoutX="239.0" layoutY="104.0" prefHeight="377.0" prefWidth="551.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="104.0">
+        <columns>
+          <TableColumn fx:id="COL_ID" prefWidth="75.0" text="##" />
+          <TableColumn fx:id="COL_INTERNO" prefWidth="150.0" text="Cod Interno" />
+            <TableColumn fx:id="COL_BARRAS" minWidth="0.0" prefWidth="150.0" text="Cod Barras" />
+            <TableColumn fx:id="COL_DESCRIPCION" prefWidth="300.0" text="Descripcion" />
+            <TableColumn fx:id="COL_DEPARTAMENTO" prefWidth="250.0" text="Depo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_busqueda" layoutX="239.0" layoutY="69.0" prefHeight="26.0" prefWidth="445.0" promptText="Buscar" />
+      <Label layoutX="241.0" layoutY="52.0" text="Buscar" />
+   </children>
+</AnchorPane>

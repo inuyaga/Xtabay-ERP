@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ncc.FXMLDocumentController">
+   <children>
+      <Text layoutX="368.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido">
+         <font>
+            <Font name="DejaVu Serif Bold" size="24.0" />
+         </font></Text>
+      <HBox layoutX="396.0" layoutY="235.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;">
+         <children>
+            <FontAwesomeIconView glyphName="USER" size="25" />
+            <TextField fx:id="txt_usr" prefHeight="26.0" prefWidth="231.0" promptText="Usuario" styleClass="text-field" />
+         </children>
+      </HBox>
+      <HBox layoutX="396.0" layoutY="320.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;">
+         <children>
+            <FontAwesomeIconView glyphName="UNLOCK_ALT" size="25" />
+            <PasswordField fx:id="txt_pass" onKeyPressed="#accion_boton_entrar" prefHeight="26.0" prefWidth="236.0" promptText="Contraseñas" />
+         </children>
+      </HBox>
+      <Pane layoutY="-1.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #5E35B1;">
+         <children>
+            <FontAwesomeIconView glyphName="FIRE" layoutX="113.0" layoutY="227.0" size="100" style="-fx-fill: white;" />
+            <Label layoutX="104.0" layoutY="244.0" text="JMG" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Text layoutX="368.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio de sesion">
+         <font>
+            <Font name="DejaVu Serif Bold" size="10.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="FIRE" layoutX="369.0" layoutY="97.0" size="70" />
+      <FontAwesomeIconView glyphName="TIMES_CIRCLE" layoutX="671.0" layoutY="26.0" onMouseClicked="#AccionCerrarVentana" size="30" style="-fx-fill: red;" />
+   </children>
+</AnchorPane>

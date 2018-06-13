@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClasesObjetos.buscador.BComprasConsultaController">
+   <children>
+      <TableView fx:id="TablaComprasConsulta" layoutX="-4.0" layoutY="53.0" onKeyPressed="#pulsarenter" onMouseClicked="#dobleClic" prefHeight="346.0" prefWidth="606.0">
+        <columns>
+            <TableColumn fx:id="colpago" prefWidth="92.00003051757812" text="#Pago" />
+          <TableColumn fx:id="colcompra" prefWidth="92.00003051757812" text="Compra" />
+            <TableColumn fx:id="colproveedor" prefWidth="92.00003051757812" text="Proveedor" />
+          <TableColumn fx:id="colabono" prefWidth="95.0" text="Abono" />
+            <TableColumn fx:id="colmpago" prefWidth="142.0" text="MetodoPago" />
+            <TableColumn fx:id="colreferencia" prefWidth="85.0" text="Referencia" />
+            <TableColumn fx:id="colobservacion" prefWidth="191.0" text="Observación" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtBusqueda" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="366.0" promptText="Compra o fac" />
+   </children>
+</AnchorPane>

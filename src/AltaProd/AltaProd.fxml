@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AltaProd.AltaProdController">
+   <children>
+      <HBox layoutX="3.0" layoutY="4.0" prefHeight="295.0" prefWidth="594.0" AnchorPane.bottomAnchor="101.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <VBox prefHeight="391.0" prefWidth="217.0" HBox.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets left="10.0" right="10.0" />
+               </opaqueInsets>
+               <children>
+                  <JFXTextField fx:id="TXTCODIGOINTERNO" labelFloat="true" promptText="Código interno">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="TEXTDESCR" labelFloat="true" promptText="Descripción">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="TXTSTOCK" labelFloat="true" promptText="Stock minímo">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <ComboBox fx:id="COMBOMARCA" prefHeight="25.0" prefWidth="173.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <JFXTextField fx:id="TXTUNIDAD" labelFloat="true" promptText="Clave unidad">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="TXTIVA" labelFloat="true" promptText="Porcentaje de IVA">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="TXTIEPS" labelFloat="true" promptText="Porcentaje IEPS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="391.0" prefWidth="221.0" HBox.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets left="10.0" right="10.0" />
+               </opaqueInsets>
+               <children>
+                  <JFXTextField fx:id="TXTCODBARRAS" labelFloat="true" promptText="Cod. Barras">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="TXTPRECIOCOSTO" labelFloat="true" promptText="Precio costo">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtPROVEEDOR" labelFloat="true" promptText="Número de proveedor">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <ComboBox fx:id="CMBDEPARTAMENTO" prefHeight="25.0" prefWidth="167.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <JFXTextField fx:id="TXTPRODSERV" labelFloat="true" promptText="Clave Producto/servicio">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="TXTISR" promptText="Porcentaje ISR">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="391.0" prefWidth="260.0" HBox.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets left="10.0" right="10.0" />
+               </opaqueInsets>
+               <children>
+                  <Label fx:id="LblPorcentaje1" prefHeight="17.0" prefWidth="218.0" text="Precio 1: " VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="TXTPORCENTAJE1" labelFloat="true" promptText="\% Ganancia">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label fx:id="LblPorcentaje2" prefHeight="16.0" prefWidth="203.0" text="Precio 2:" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="TXTPORCENTAJE2" labelFloat="true" promptText="\% Ganancia">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label fx:id="LblPorcentaje3" prefHeight="16.0" prefWidth="202.0" text="Precio 3:" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="TXTPORCENTAJE3" labelFloat="true" promptText="\% Ganancia">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label fx:id="LblPorcentaje4" prefHeight="16.0" prefWidth="211.0" text="Precio 4:" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="TXTPORCENTAJE4" labelFloat="true" promptText="\% Ganancia">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label fx:id="LblPorcentaje5" prefHeight="16.0" prefWidth="209.0" text="Precio 5:" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="TXTPORCENTAJE5" labelFloat="true" promptText="\% Ganancia">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" top="10.0" />
+         </opaqueInsets>
+      </HBox>
+      <JFXButton layoutX="620.0" layoutY="408.0" onAction="#GuardarProducto" prefHeight="63.0" prefWidth="167.0" style="-fx-background-color: #1a237e;" text="Guardar Producto" textFill="WHITE" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="408.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="LblRespuestaDeBusqueda" layoutX="14.0" layoutY="409.0" prefHeight="63.0" prefWidth="305.0" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="435.0" layoutY="413.0" onAction="#ValidarProdServ" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #1a237e;" text="Validar Prod o Serv" textFill="WHITE" AnchorPane.rightAnchor="218.0" />
+      <JFXButton layoutX="435.0" layoutY="447.0" onAction="#ValidarPieza" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #1a237e;" text="Validar unidad" textFill="WHITE" AnchorPane.rightAnchor="218.0" />
+   </children>
+</AnchorPane>

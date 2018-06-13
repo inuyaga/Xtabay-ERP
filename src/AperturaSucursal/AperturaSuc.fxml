@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AperturaSucursal.AperturaSucController">
+   <children>
+      <Label layoutX="169.0" layoutY="10.0" text="Aperturar nueva sucursal">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="TxtNombreSucursal" labelFloat="true" layoutX="50.0" layoutY="66.0" prefHeight="25.0" prefWidth="531.0" promptText="Nombre de la sucursal" />
+      <JFXTextField fx:id="TxtDireccionSuc" labelFloat="true" layoutX="50.0" layoutY="107.0" prefHeight="25.0" prefWidth="531.0" promptText="Dirección" />
+      <JFXTextField fx:id="TxtEsloganSuc" labelFloat="true" layoutX="50.0" layoutY="145.0" prefHeight="25.0" prefWidth="531.0" promptText="Eslogan de la sucursal" />
+      <JFXTextField fx:id="TxtTelefonoSuc" labelFloat="true" layoutX="50.0" layoutY="182.0" prefHeight="25.0" prefWidth="155.0" promptText="Telefono" />
+      <JFXTextField fx:id="TxtRfcSuc" labelFloat="true" layoutX="50.0" layoutY="221.0" prefHeight="25.0" prefWidth="155.0" promptText="RFC" />
+      <JFXComboBox fx:id="CmbMetodoPagoSuc" layoutX="294.0" layoutY="195.0" prefHeight="25.0" prefWidth="207.0" />
+      <JFXButton fx:id="BtnGuardarSuc" layoutX="264.0" layoutY="325.0" onAction="#AperturaSucursal" prefHeight="42.0" prefWidth="103.0" style="-fx-background-color: #1a237e;" text="Guardar" textFill="#fffdfd" />
+   </children>
+</AnchorPane>

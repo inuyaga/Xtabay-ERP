@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TicketVentaFinal_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3d2f1c54-ce0d-4af8-8c19-c46da0459afd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="IDVenta" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     Ncc_Venta_Pagos.`Pagos_ID` AS Ncc_Venta_Pagos_Pagos_ID,
+     Ncc_Venta_Pagos.`Pagos_Abono` AS Ncc_Venta_Pagos_Pagos_Abono,
+     Ncc_Venta_Pagos.`Pagos_FechaAdicion` AS Ncc_Venta_Pagos_Pagos_FechaAdicion,
+     Ncc_Venta_Pagos.`Pagos_IDQuienPago` AS Ncc_Venta_Pagos_Pagos_IDQuienPago,
+     Ncc_Venta_Pagos.`Pagos_IDMetodoPago` AS Ncc_Venta_Pagos_Pagos_IDMetodoPago,
+     Ncc_Venta_Pagos.`Pagos_Referencia` AS Ncc_Venta_Pagos_Pagos_Referencia,
+     Ncc_Venta_Pagos.`Pagos_Observacion` AS Ncc_Venta_Pagos_Pagos_Observacion,
+     Ncc_Venta_Pagos.`Pagos_NumCuenta` AS Ncc_Venta_Pagos_Pagos_NumCuenta,
+     Ncc_Venta_Pagos.`Pagos_ID_Venta` AS Ncc_Venta_Pagos_Pagos_ID_Venta
+FROM
+     `Ncc_Venta_Pagos` Ncc_Venta_Pagos
+
+WHERE Pagos_ID_Venta=$P{IDVenta}]]>
+	</queryString>
+	<field name="Ncc_Venta_Pagos_Pagos_ID" class="java.lang.Integer"/>
+	<field name="Ncc_Venta_Pagos_Pagos_Abono" class="java.lang.Double"/>
+	<field name="Ncc_Venta_Pagos_Pagos_FechaAdicion" class="java.sql.Timestamp"/>
+	<field name="Ncc_Venta_Pagos_Pagos_IDQuienPago" class="java.lang.Integer"/>
+	<field name="Ncc_Venta_Pagos_Pagos_IDMetodoPago" class="java.lang.String"/>
+	<field name="Ncc_Venta_Pagos_Pagos_Referencia" class="java.lang.String"/>
+	<field name="Ncc_Venta_Pagos_Pagos_Observacion" class="java.lang.String"/>
+	<field name="Ncc_Venta_Pagos_Pagos_NumCuenta" class="java.lang.Integer"/>
+	<field name="Ncc_Venta_Pagos_Pagos_ID_Venta" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="14" width="100" height="20" uuid="79ad1ef9-b5bb-4f3e-ade0-68e3b549ac8e"/>
+				<text><![CDATA[##]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="14" width="100" height="20" uuid="6d2d19a3-6f6c-4455-8d6c-14ce5443014f"/>
+				<text><![CDATA[Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="14" width="100" height="20" uuid="7f97401a-a55d-4149-9615-02fb785a4217"/>
+				<text><![CDATA[Meto pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="14" width="100" height="20" uuid="e54030a1-c6c0-4360-95b6-b34b7f7cba12"/>
+				<text><![CDATA[Cuenta]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="dd15810b-63c7-4140-a910-f72c176cf050"/>
+				<textFieldExpression><![CDATA[$F{Ncc_Venta_Pagos_Pagos_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="21176b6d-3fe3-4ab7-8dd1-8b2ed5557136"/>
+				<textFieldExpression><![CDATA[$F{Ncc_Venta_Pagos_Pagos_Abono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="0f6ab803-e515-4201-89ad-d2a8364a2a20"/>
+				<textFieldExpression><![CDATA[$F{Ncc_Venta_Pagos_Pagos_IDMetodoPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="542d7946-e4dc-43d0-8f8b-a0d3c6077fc2"/>
+				<textFieldExpression><![CDATA[$F{Ncc_Venta_Pagos_Pagos_NumCuenta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

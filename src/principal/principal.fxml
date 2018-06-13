@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.PrincipalController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Administración">
+               <items>
+                  <Menu mnemonicParsing="false" text="Apertura">
+                    <items>
+                      <MenuItem fx:id="ItemNuevaSucursal" mnemonicParsing="false" onAction="#AccionAperturaSucursal" text="Nueva Sucursal" visible="false" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Grupos">
+                    <items>
+                        <MenuItem fx:id="ItemCreaGrupos" mnemonicParsing="false" onAction="#AccionCrearGrupo" text="Crear grupo" visible="false" />
+                        <MenuItem fx:id="ItemEditaGrupo" mnemonicParsing="false" onAction="#AccionEdicionGrupos" text="Editar Grupos" visible="false" />
+                        <MenuItem fx:id="ItemPermisosAdicionalGrupos" mnemonicParsing="false" onAction="#AccionPermisosGrupos" text="Permisos adicionales" visible="false" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Usuarios">
+                    <items>
+                      <MenuItem fx:id="ItemUsrAgrega" mnemonicParsing="false" onAction="#accionAgregaUsuario" text="Agregar usuarios" visible="false" />
+                      <MenuItem fx:id="ItemUsrModificar" mnemonicParsing="false" onAction="#AccionUsrModificar" text="Modificar" visible="false" />
+                        <MenuItem fx:id="ItemUsrPermisosAdicionales" mnemonicParsing="false" onAction="#AccionPermisosAdicionales" text="Permisos adicionales" visible="false" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Catálogos">
+            <items>
+                  <Menu mnemonicParsing="false" text="Clientes">
+                    <items>
+                    <MenuItem fx:id="ItemClientes" mnemonicParsing="false" onAction="#AccionClientes" text="Alta, edicion Clientes" visible="false" />
+                      <MenuItem mnemonicParsing="false" text="Pago a Clientes" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Proveedores">
+                    <items>
+                        <MenuItem fx:id="ItemProvedores" mnemonicParsing="false" onAction="#AccionProveedores" text="Alta, edición Proveedores" visible="false" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Productos">
+                    <items>
+                      <MenuItem fx:id="ItemInventarioDepo" mnemonicParsing="false" onAction="#AccionDepartamentos" text="Alta, edicion de Departamentos" visible="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#AccionAltaMarcas" text="Alta, edición Marcas" />
+                        <MenuItem fx:id="ItemInventarioProductos" mnemonicParsing="false" onAction="#AccionAltaProducto" text="Alta productos" visible="false" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Movimientos">
+               <items>
+                  <Menu mnemonicParsing="false" text="Entradas">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#AccionEntradasCompras" text="Compras" />
+                        <MenuItem mnemonicParsing="false" text="Devoluciones" />
+                        <MenuItem mnemonicParsing="false" onAction="#AccionEntregaMercancia" text="Entrega de mercancia" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Salidas">
+                     <items>
+                      <MenuItem mnemonicParsing="false" onAction="#AccionPagoProveedores" text="Pago a Proveedores" />
+                        <MenuItem mnemonicParsing="false" onAction="#AccionItemPuntoVenta" text="Punto de Venta">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Ventas" />
+                        <MenuItem mnemonicParsing="false" text="Notas de credito" />
+                        <MenuItem mnemonicParsing="false" text="Devoluciones" />
+                        <MenuItem mnemonicParsing="false" text="Otros" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+                  <Menu mnemonicParsing="false" text="Administración">
+                    <items>
+                      <MenuItem fx:id="ItemReportePermisos" mnemonicParsing="false" onAction="#AccionVisualizarPermisos" text="Permisos existentes" visible="false" />
+                        <MenuItem fx:id="ItemReporteUsuarios" mnemonicParsing="false" text="Usuarios" visible="false" />
+                        <MenuItem fx:id="ItemReporteGrupos" mnemonicParsing="false" text="Grupos" visible="false" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Herramientas">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Mostrar/Enviar Factura" />
+                  <MenuItem mnemonicParsing="false" text="Reimpresión de ticket" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sistema">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Manual de usuario" />
+                  <MenuItem fx:id="ItemSistemasMateniiento" mnemonicParsing="false" text="Mantenimiento" visible="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#AccionAcercaDe" text="Acerca de..." />
+                  <MenuItem mnemonicParsing="false" onAction="#AccionCerrarSesion" text="Cerrar sesión" />
+                  <MenuItem mnemonicParsing="false" onAction="#AccionBotonSalir" text="Salir del sistema" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane fx:id="PaneRemplazo" layoutX="7.0" layoutY="29.0" prefHeight="370.0" prefWidth="592.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="29.0" />
+   </children>
+</AnchorPane>

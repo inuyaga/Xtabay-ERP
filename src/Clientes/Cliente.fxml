@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Clientes.ClienteController">
+   <children>
+      <Text layoutX="23.0" layoutY="20.93310546875" strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="7.93310546875" />
+      <TextField fx:id="txt_busqueda" layoutX="23.0" layoutY="28.0" prefHeight="26.0" prefWidth="419.0" promptText="Buscar clientes" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="28.0" />
+      <TableView fx:id="Tabla_Clientes" layoutX="23.0" layoutY="61.0" onMouseClicked="#AccionClicTablaCliente" prefHeight="221.0" prefWidth="757.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="218.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="61.0">
+        <columns>
+          <TableColumn fx:id="Col_ID" prefWidth="75.0" text="#" />
+          <TableColumn fx:id="Col_Nombre" prefWidth="300.0" text="Nombre" />
+            <TableColumn fx:id="Col_Calle" prefWidth="200.0" text="Calle" />
+            <TableColumn fx:id="Col_Colonia" prefWidth="200.0" text="Colonia" />
+            <TableColumn fx:id="Col_Ciudad" prefWidth="200.0" text="Ciudad" />
+            <TableColumn fx:id="Col_Estado" prefWidth="200.0" text="Estado" />
+            <TableColumn fx:id="Col_cp" prefWidth="200.0" text="CP" />
+            <TableColumn fx:id="Col_Telefono" prefWidth="200.0" text="Telefono" />
+            <TableColumn fx:id="Col_RFC" prefWidth="150.0" text="RFC" />
+            <TableColumn fx:id="Col_Email" prefWidth="300.0" text="Email" />
+            <TableColumn fx:id="Col_LimiteCredito" prefWidth="150.0" text="Limite credito" />
+            <TableColumn fx:id="Col_MetodoPago" prefWidth="150.0" text="Metodo pago" />
+            <TableColumn fx:id="Col_DiasCredito" prefWidth="100.0" text="Dias credito" />
+            <TableColumn fx:id="Col_Vendedor" prefWidth="100.0" text="Vendedor" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Eliminar" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button fx:id="Btn_acciones" layoutX="23.0" layoutY="460.0" mnemonicParsing="false" onAction="#AccionNuevoCliente" text="Nuevo" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="717.0" />
+      <Button fx:id="btn_aplica_cambios" disable="true" layoutX="99.0" layoutY="460.0" mnemonicParsing="false" onAction="#AccionAplicaCambios" text="Aplicar" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="638.0" />
+      <HBox layoutX="14.0" layoutY="294.0" prefHeight="45.0" prefWidth="757.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="29.0">
+         <children>
+            <JFXTextField fx:id="txt_nombre" labelFloat="true" prefHeight="26.0" prefWidth="250.0" promptText="Nombre" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_calle" labelFloat="true" prefHeight="26.0" prefWidth="150.0" promptText="Calle" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_colonia" labelFloat="true" prefHeight="26.0" prefWidth="150.0" promptText="Colonia" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="combobox_estado" labelFloat="true" prefHeight="26.0" prefWidth="172.0" promptText="Selecciona un estado" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXComboBox>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="352.0" prefHeight="45.0" prefWidth="742.0" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="44.0">
+         <children>
+            <JFXTextField fx:id="txt_ciudad" labelFloat="true" promptText="Ciudad" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_cp" labelFloat="true" promptText="Codigo postal" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_telefono" labelFloat="true" promptText="Telefono" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_rfc" labelFloat="true" promptText="RFC" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="413.0" prefHeight="33.0" prefWidth="771.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <JFXTextField fx:id="txt_email" labelFloat="true" onAction="#AccionNuevoCliente" prefHeight="24.0" prefWidth="295.0" promptText="Email">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txt_limiteCredito" labelFloat="true" promptText="Limite credito">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="ComboboxMetodoPago" labelFloat="true" prefHeight="26.0" prefWidth="239.0" promptText="Metodo pago" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXComboBox>
+            <JFXTextField fx:id="txt_diasCredito" labelFloat="true" promptText="Dias credito">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="ComboboxVendedor" labelFloat="true" prefHeight="26.0" prefWidth="127.0" promptText="Vendedor" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

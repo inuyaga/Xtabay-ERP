@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.ListSelectionView?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="usuarios.Permisos_adicionalesController">
+   <children>
+      <ListSelectionView fx:id="Selector_permisos" layoutX="473.0" layoutY="1.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="308.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="1.0" />
+      <TableView fx:id="TablaUsuarios" layoutX="14.0" layoutY="62.0" onMouseClicked="#AccionDobleClicTabla" prefHeight="277.0" prefWidth="425.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="361.0" AnchorPane.topAnchor="62.0">
+        <columns>
+          <TableColumn fx:id="Col_ID" prefWidth="75.0" text="##" />
+          <TableColumn fx:id="Col_user" prefWidth="111.0" text="Usuario" />
+            <TableColumn fx:id="Col_nombre" prefWidth="237.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_aplicar_cambios" disable="true" layoutX="14.0" layoutY="456.0" mnemonicParsing="false" onAction="#AccionAplicarCambios" text="Aplicar" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="txt_nombre_completo" editable="false" layoutX="18.0" layoutY="415.0" prefHeight="26.0" prefWidth="274.0" promptText="Nombre completo" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="txt_busqueda" layoutX="14.0" layoutY="29.0" prefHeight="26.0" prefWidth="284.0" promptText="Buscar" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="29.0" />
+      <TextField fx:id="txt_usuario" editable="false" layoutX="14.0" layoutY="366.0" prefHeight="26.0" prefWidth="168.0" promptText="Usuario" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="14.0" />
+      <Text layoutX="16.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busqueda" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="6.0" />
+      <Text layoutX="19.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="19.0" />
+      <Text layoutX="18.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario" AnchorPane.bottomAnchor="141.0" AnchorPane.leftAnchor="18.0" />
+   </children>
+</AnchorPane>

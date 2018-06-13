@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="ClasesObjetos.buscador.BClientesController">
+   <children>
+      <TableView fx:id="Tabla_Cliente" layoutX="8.0" layoutY="76.0" onMouseClicked="#AccionDobleClicTabla" prefHeight="279.0" prefWidth="590.0">
+        <columns>
+          <TableColumn fx:id="COL_RFC" prefWidth="167.0" text="RFC" />
+          <TableColumn fx:id="COL_NOMBRE" prefWidth="379.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_buscar" layoutX="14.0" layoutY="37.0" prefHeight="26.0" prefWidth="356.0" />
+      <Button layoutX="428.0" layoutY="360.0" mnemonicParsing="false" text="Cancelar" />
+      <Button layoutX="517.0" layoutY="360.0" mnemonicParsing="false" text="Aceptar" />
+   </children>
+</AnchorPane>

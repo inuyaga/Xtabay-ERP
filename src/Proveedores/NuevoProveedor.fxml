@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Proveedores.NuevoProveedorController">
+   <children>
+      <JFXTextField fx:id="BusquedaTxt" labelFloat="true" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="401.0" promptText="Buscar Proveedor (RFC o nombre)" AnchorPane.leftAnchor="14.0" />
+      <TableView fx:id="TablaProveedores" layoutX="12.0" layoutY="49.0" onMouseClicked="#DobleClic" prefHeight="210.0" prefWidth="573.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="241.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="49.0">
+        <columns>
+          <TableColumn fx:id="IdCol" prefWidth="64.0" text="#" />
+          <TableColumn fx:id="RFCCol" prefWidth="127.0" text="RFC" />
+            <TableColumn fx:id="ProveedorCol" prefWidth="242.0" text="Nombre" />
+            <TableColumn fx:id="DiasCol" prefWidth="127.0" text="Dias Crédito" />
+            <TableColumn fx:id="MpagoCol" prefWidth="127.0" text="MetodoPago" />
+            <TableColumn fx:id="CorreoCol" prefWidth="127.0" text="Correo" />
+            <TableColumn fx:id="TelefonoCol" prefWidth="127.0" text="Telefono" />
+            <TableColumn fx:id="CalleCol" prefWidth="127.0" text="Calle" />
+            <TableColumn fx:id="cpCol" prefWidth="127.0" text="CP" />
+            <TableColumn fx:id="ColoniaCol" prefWidth="127.0" text="Colonia" />
+            <TableColumn fx:id="CiudadCol" prefWidth="127.0" text="Ciudad" />
+            <TableColumn fx:id="EstadoCol" prefWidth="127.0" text="Estado" />
+            <TableColumn fx:id="limiteCredCol" prefWidth="127.0" text="Crédito" />
+            <TableColumn fx:id="t_entregaCol" prefWidth="127.0" text="T. Entrega" />
+        </columns>
+      </TableView>
+      <HBox layoutX="14.0" layoutY="276.0" prefHeight="136.0" prefWidth="773.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="231.0">
+               <children>
+                  <JFXTextField fx:id="RFC_TXT" labelFloat="true" prefHeight="25.0" prefWidth="127.0" promptText="RFC" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="correoTXT" promptText="Correo" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="ColoniaTXT" labelFloat="true" promptText="Colonia" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="272.0">
+               <children>
+                  <JFXTextField fx:id="proveedorTXT" labelFloat="true" promptText="Nombre de proveedor">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="telTXT" labelFloat="true" promptText="Telefono">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="CiudadTXT" labelFloat="true" promptText="Ciudad">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="263.0">
+               <children>
+                  <JFXTextField fx:id="diasTXT" labelFloat="true" prefHeight="25.0" prefWidth="71.0" promptText="Dias crédito">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="CalleTXT" labelFloat="true" prefHeight="25.0" prefWidth="204.0" promptText="Calle">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <ComboBox fx:id="EstadoCombo" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="243.0">
+               <children>
+                  <ComboBox fx:id="pagoCombo" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <JFXTextField fx:id="txtLimiteCred" labelFloat="true" promptText="Límite de crédito">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="CpTXT" labelFloat="true" prefHeight="25.0" prefWidth="71.0" promptText="CP">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <JFXButton fx:id="nuevoBtn" layoutX="651.0" layoutY="444.0" onAction="#GuardarNuevo" style="-fx-background-color: #1a237e;" text="Nuevo" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="89.0" />
+      <JFXButton fx:id="EditarBtn" layoutX="718.0" layoutY="444.0" onAction="#GuardarCambios" style="-fx-background-color: #1a237e;" text="Editar" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="25.0" />
+   </children>
+</AnchorPane>

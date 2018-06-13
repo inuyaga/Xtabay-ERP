@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#AccionEsc" prefHeight="373.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClasesObjetos.buscador.BProductoController">
+   <children>
+      <TextField fx:id="txt_busqueda" layoutX="11.0" layoutY="53.0" prefHeight="26.0" prefWidth="370.0" promptText="Buscar" />
+      <TableView fx:id="TablaBuscador" layoutY="94.0" onKeyPressed="#AccionTeclaEnter" onMouseClicked="#AccionDobleClick" prefHeight="200.0" prefWidth="600.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="COL_ID" prefWidth="75.0" text="##" />
+          <TableColumn fx:id="COL_DESCRIPCION" prefWidth="250.0" text="Descripcion" />
+            <TableColumn fx:id="Col_Unidad" prefWidth="75.0" text="Unidad" />
+            <TableColumn fx:id="COL_INTERNO" prefWidth="232.0" text="Cod Interno" />
+            <TableColumn fx:id="COL_IVA" prefWidth="75.0" text="IVA" />
+            <TableColumn fx:id="COL_IEPS" prefWidth="75.0" text="IEPS" />
+            <TableColumn fx:id="COL_ISR" prefWidth="75.0" text="ISR" />
+            <TableColumn fx:id="COL_BARRAS" prefWidth="136.0" text="Codigo Barras" />
+            <TableColumn fx:id="COL_PRECIO" prefWidth="136.0" text="Precio" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
